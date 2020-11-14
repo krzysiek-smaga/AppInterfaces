@@ -17,6 +17,14 @@ namespace AppInterfaces
 
             PasswordManager pm = new PasswordManager("iluvpie", true);
 
+            tdl.Display();
+            pm.Display();
+
+            tdl.Reset();
+            pm.Reset();
+
+            tdl.Display();
+            pm.Display();
 
 
             Console.ReadLine();

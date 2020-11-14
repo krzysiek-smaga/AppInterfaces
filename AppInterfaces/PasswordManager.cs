@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppInterfaces
 {
-    class PasswordManager
+    class PasswordManager : IDisplayable, IResetable
     {
         private string Password
         { get; set; }
@@ -18,6 +18,24 @@ namespace AppInterfaces
         {
             Password = password;
             Hidden = hidden;
+        }
+
+        public void Display()
+        {
+            if (this.Hidden == false)
+            {
+                Console.WriteLine(Password);
+            }
+            else
+            {
+                Console.WriteLine("*");
+            }
+        }
+
+        public void Reset()
+        {
+            Password = "";
+            Hidden = false;
         }
     }
 }
